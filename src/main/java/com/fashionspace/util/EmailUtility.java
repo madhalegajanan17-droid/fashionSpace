@@ -14,7 +14,7 @@ public class EmailUtility {
     private static final String FROM_EMAIL = System.getenv("MAIL_USERNAME");
     private static final String PASSWORD = System.getenv("MAIL_PASSWORD");
     private static final String HOST = "smtp.gmail.com";
-    private static final String PORT = "587";
+    private static final String PORT = "465";
 
     public static boolean sendOTP(String toEmail, String otp) {
         try {
@@ -27,7 +27,7 @@ public class EmailUtility {
             properties.put("mail.smtp.host", HOST);
             properties.put("mail.smtp.port", PORT);
             properties.put("mail.smtp.auth", "true");
-            properties.put("mail.smtp.starttls.enable", "true");
+            properties.put("mail.smtp.ssl.enable", "true");
 
             Session session = Session.getInstance(properties, new Authenticator() {
                 protected PasswordAuthentication getPasswordAuthentication() {
@@ -61,7 +61,7 @@ public class EmailUtility {
             properties.put("mail.smtp.host", HOST);
             properties.put("mail.smtp.port", PORT);
             properties.put("mail.smtp.auth", "true");
-            properties.put("mail.smtp.starttls.enable", "true");
+            properties.put("mail.smtp.ssl.enable", "true");
 
             Session session = Session.getInstance(properties, new Authenticator() {
                 protected PasswordAuthentication getPasswordAuthentication() {
