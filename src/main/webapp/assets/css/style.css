@@ -1,5 +1,47 @@
 /* ===== RESPONSIVE HEADER FIX FOR ALL DEVICES - PC, TAB, MOBILE ===== */
 
+
+
+
+/* ===== MOBILE VIEW - 768px se chota ===== */
+@media (max-width: 768px) {
+    .navbar, header {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 15px;
+    }
+    
+    /* Line 1: Logo */
+    .navbar .logo, header .logo {
+        text-align: center;
+        width: 100%;
+    }
+    
+    /* Line 2: Nav Links */
+    .navbar .nav-links, header nav {
+        justify-content: center;
+        width: 100%;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+    }
+    
+    /* Line 3: Right Section - YE 2 LINE NAYI ADD KARO */
+    .navbar .nav-right, header .nav-right {
+        justify-content: center;
+        width: 100%;
+        padding-top: 10px;
+        gap: 20px; /* 1. Icons ke beech gap */
+    }
+    
+    /* Search full width - YE BHI BADLAO */
+    .search-form {
+        width: 100%;
+        margin-bottom: 8px; /* 2. Search ke niche gap */
+    }
+    .search-form input[type="text"] {
+        width: 100%;
+    }
+}
 /* 1. Global Reset */
 * {
     box-sizing: border-box;
