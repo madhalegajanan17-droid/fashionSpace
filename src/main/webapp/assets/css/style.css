@@ -134,3 +134,70 @@ body{
     border-top:1px solid #374151;
     color:#d1d5db;
 }
+
+/* ===== GLOBAL MOBILE RESPONSIVE FIX ===== */
+
+/* 1. Sab images aur video responsive */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 2. Box sizing fix */
+* {
+    box-sizing: border-box;
+}
+
+/* 3. Container padding */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 4. Navbar mobile me wrap ho jaye */
+.navbar, header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links, header nav a {
+    white-space: nowrap;
+}
+
+/* 5. Table scrollable */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* 6. Mobile view - 768px se chota */
+@media (max-width: 768px) {
+    .navbar, header nav {
+        flex-direction: column; /* Mobile me sab neeche */
+        align-items: flex-start;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    body {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+}
