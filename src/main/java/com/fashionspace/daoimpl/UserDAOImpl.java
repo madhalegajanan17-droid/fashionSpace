@@ -234,34 +234,34 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public boolean updatePassword(
-            String email,
-            String newPassword) {
+    		String email,
+    		String newPassword) {
 
-        boolean status = false;
+    	boolean status = false;
 
-        try {
+    	try {
 
-            String query =
-                    "update users set password=? where email=?";
+    		String query =
+    				"update users set password=? where email=?";
 
-            PreparedStatement ps =
-                    connection.prepareStatement(query);
+    		PreparedStatement ps =
+    				connection.prepareStatement(query);
 
-            ps.setString(1, newPassword);
-            ps.setString(2, email);
+    		ps.setString(1, newPassword);
+    		ps.setString(2, email);
 
-            int rows = ps.executeUpdate();
+    		int rows = ps.executeUpdate();
 
-            if (rows > 0) {
+    		if (rows > 0) {
 
-                status = true;
-            }
+    			status = true;
+    		}
 
-        } catch (Exception e) {
+    	} catch (Exception e) {
 
-            e.printStackTrace();
-        }
+    		e.printStackTrace();
+    	}
 
-        return status;
+    	return status;
     }
 }
