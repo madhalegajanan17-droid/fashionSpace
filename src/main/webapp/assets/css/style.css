@@ -1,195 +1,136 @@
-/* ===== RESPONSIVE HEADER FIX FOR ALL DEVICES - PC, TAB, MOBILE ===== */
-
-
-
-
-/* ===== MOBILE VIEW - 768px se chota ===== */
-@media (max-width: 768px) {
-    .navbar, header {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 10px 15px;
-    }
-    
-    /* Line 1: Logo */
-    .navbar .logo, header .logo {
-        text-align: center;
-        width: 100%;
-    }
-    
-    /* Line 2: Nav Links */
-    .navbar .nav-links, header nav {
-        justify-content: center;
-        width: 100%;
-        border-bottom: 1px solid #eee;
-        padding-bottom: 10px;
-    }
-    
-    /* Line 3: Right Section - YE 2 LINE NAYI ADD KARO */
-    .navbar .nav-right, header .nav-right {
-        justify-content: center;
-        width: 100%;
-        padding-top: 10px;
-        gap: 20px; /* 1. Icons ke beech gap */
-    }
-    
-    /* Search full width - YE BHI BADLAO */
-    .search-form {
-        width: 100%;
-        margin-bottom: 8px; /* 2. Search ke niche gap */
-    }
-    .search-form input[type="text"] {
-        width: 100%;
-    }
-}
-/* 1. Global Reset */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-img, video {
-    max-width: 100%;
-    height: auto;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-/* 2. Main Header Container */
-.navbar, header {
-    display: flex;
-    flex-wrap: wrap; /* Important: Isse cheezein neeche aa jayengi agar jagah kam ho */
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 30px;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-    gap: 15px; /* Gap dene se chipkega nahi */
-    width: 100%;
+body{
+    background:#f5f7fb;
+    color:#222;
 }
 
-/* 3. Logo */
-.navbar .logo, header .logo {
-    font-size: 22px;
-    font-weight: 700;
-    color: #2563eb;
-    flex-shrink: 0; /* Logo chota nahi hoga */
-}
-.navbar .logo a, header .logo a {
-    color: #2563eb;
-    text-decoration: none;
+/* NAVBAR */
+
+.navbar{
+    width:100%;
+    height:70px;
+    background:#ffffff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 60px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-/* 4. Middle Nav Links */
-.navbar .nav-links, header nav {
-    display: flex;
-    flex-wrap: wrap; /* Tablet me ye wrap ho jayenge */
-    gap: 18px;
-    justify-content: center;
-    align-items: center;
-    flex: 1 1 auto; /* Bachi hui jagah le lega */
+.logo a{
+    text-decoration:none;
+    font-size:28px;
+    font-weight:700;
+    color:#2563eb;
 }
 
-.navbar .nav-links a, header nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    font-size: 15px;
-    white-space: nowrap; /* Link todega nahi */
-    padding: 5px 0;
-}
-.navbar .nav-links a:hover, header nav a:hover {
-    color: #2563eb;
+.nav-links{
+    display:flex;
+    gap:30px;
 }
 
-/* 5. Right Side Section */
-.navbar .nav-right, header .nav-right {
-    display: flex;
-    flex-wrap: wrap; /* Yaha bhi wrap hoga */
-    align-items: center;
-    gap: 15px;
-    justify-content: flex-end;
-    flex-shrink: 0; /* Ye dabega nahi */
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-size:16px;
+    font-weight:500;
+    transition:0.3s;
 }
 
-/* 6. Search Bar */
-.search-form {
-    display: flex;
-    align-items: center;
-}
-.search-form input[type="text"] {
-    padding: 7px 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    width: 160px;
-}
-.search-form button {
-    padding: 7px 12px;
-    border: 1px solid #2563eb;
-    background: #2563eb;
-    color: white;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
+.nav-links a:hover{
+    color:#2563eb;
 }
 
-/* 7. Cart, Wishlist, User, Logout */
-.navbar .nav-right a, header .nav-right a {
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-}
-.btn-logout {
-    background: #ef4444;
-    color: white !important;
-    padding: 6px 12px;
-    border-radius: 5px;
-    font-weight: 500;
+.nav-icons{
+    display:flex;
+    align-items:center;
+    gap:20px;
 }
 
-/* ===== TABLET VIEW - 992px se chota ===== */
-@media (max-width: 992px) {
-    .navbar, header {
-        padding: 12px 20px;
-        gap: 10px;
-    }
-    .search-form input[type="text"] {
-        width: 120px; /* Tablet me search chota */
-    }
+.nav-icons a{
+    color:#333;
+    font-size:20px;
+    transition:0.3s;
+    text-decoration:none;
 }
 
-/* ===== MOBILE VIEW - 768px se chota ===== */
-@media (max-width: 768px) {
-    .navbar, header {
-        flex-direction: column; /* Mobile me sab 3 line me */
-        align-items: stretch;
-        padding: 10px 15px;
-    }
-    
-    /* Line 1: Logo */
-    .navbar .logo, header .logo {
-        text-align: center;
-        width: 100%;
-    }
-    
-    /* Line 2: Nav Links */
-    .navbar .nav-links, header nav {
-        justify-content: center;
-        width: 100%;
-        border-bottom: 1px solid #eee;
-        padding-bottom: 10px;
-    }
-    
-    /* Line 3: Right Section */
-    .navbar .nav-right, header .nav-right {
-        justify-content: center;
-        width: 100%;
-        padding-top: 10px;
-    }
-    
-    /* Search full width */
-    .search-form {
-        width: 100%;
-    }
-    .search-form input[type="text"] {
-        width: 100%;
-    }
+.nav-icons a:hover{
+    color:#2563eb;
+}
+
+.user-name{
+    font-weight:600;
+    color:#111827;
+}
+
+.logout-btn{
+    text-decoration:none;
+    background:#ef4444;
+    color:white !important;
+    padding:8px 15px;
+    border-radius:8px;
+    font-size:14px !important;
+    transition:0.3s;
+}
+
+.logout-btn:hover{
+    background:#dc2626;
+}
+
+/* FOOTER */
+
+.footer{
+    background:#111827;
+    color:white;
+    margin-top:60px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    padding:50px 80px;
+    flex-wrap:wrap;
+}
+
+.footer-section{
+    width:300px;
+    margin-bottom:20px;
+}
+
+.footer-section h2,
+.footer-section h3{
+    margin-bottom:15px;
+}
+
+.footer-section p{
+    line-height:1.7;
+    color:#d1d5db;
+}
+
+.footer-section a{
+    display:block;
+    text-decoration:none;
+    color:#d1d5db;
+    margin-bottom:10px;
+    transition:0.3s;
+}
+
+.footer-section a:hover{
+    color:#60a5fa;
+}
+
+.footer-bottom{
+    text-align:center;
+    padding:20px;
+    border-top:1px solid #374151;
+    color:#d1d5db;
 }
